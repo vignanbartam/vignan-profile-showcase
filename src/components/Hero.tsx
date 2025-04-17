@@ -1,21 +1,14 @@
-
 import { ArrowRight, Mail, Github, Linkedin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const Hero = () => {
-  return (
-    <section id="home" className="min-h-screen pt-24 pb-16 flex items-center">
+  return <section id="home" className="min-h-screen pt-24 pb-16 flex items-center">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Image Column */}
           <div className="order-2 lg:order-1 flex justify-center lg:justify-start">
             <div className="relative">
               <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-portfolio-blue shadow-xl">
-                <img
-                  src="/lovable-uploads/eea18163-df8d-4e84-bfd7-2b4beb2d7b1d.png"
-                  alt="Vignan Baratam"
-                  className="w-full h-full object-cover"
-                />
+                <img alt="Vignan Baratam" className="w-full h-full object-cover" src="/lovable-uploads/1ebdfa59-ceba-4677-8018-46886c4c9207.jpg" />
               </div>
               <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-portfolio-blue rounded-full -z-10"></div>
               <div className="absolute -top-4 -left-4 w-24 h-24 bg-portfolio-lightGray rounded-full -z-10"></div>
@@ -50,7 +43,7 @@ const Hero = () => {
             </div>
 
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-              <Button className="bg-portfolio-blue hover:bg-portfolio-darkBlue gap-2">
+              <Button className="bg-portfolio-blue hover:bg-portfolio-darkBlue gap-2 text-base">
                 Download CV <ArrowRight size={16} />
               </Button>
               <Button variant="outline" className="border-portfolio-blue text-portfolio-blue hover:bg-portfolio-blue hover:text-white">
@@ -60,8 +53,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
