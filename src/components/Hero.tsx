@@ -5,7 +5,7 @@ const Hero = () => {
   const handleDownloadCV = () => {
     // Create a link element
     const link = document.createElement('a');
-    link.href = '/lovable-uploads/ff002ae4-b55a-4bc2-8c62-b20d2645a8ee.png'; // Your CV PDF URL
+    link.href = 'https://drive.google.com/file/d/1qfr6ICEqINTS7fpFvl--U5TV3uohENBe/view?usp=sharing'; // Your CV PDF URL
     link.download = 'Vignan_Baratam_CV.pdf'; // The filename for the downloaded file
     document.body.appendChild(link);
     link.click();
