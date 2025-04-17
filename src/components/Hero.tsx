@@ -1,7 +1,19 @@
-import { ArrowRight, Mail, Github, Linkedin, Phone } from "lucide-react";
+import { ArrowRight, Mail, Github, Linkedin, Phone, FileDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
 const Hero = () => {
-  return <section id="home" className="min-h-screen pt-24 pb-16 flex items-center">
+  const handleDownloadCV = () => {
+    // Create a link element
+    const link = document.createElement('a');
+    link.href = '/lovable-uploads/ff002ae4-b55a-4bc2-8c62-b20d2645a8ee.png'; // Your CV PDF URL
+    link.download = 'Vignan_Baratam_CV.pdf'; // The filename for the downloaded file
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  return (
+    <section id="home" className="min-h-screen pt-24 pb-16 flex items-center">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Image Column */}
@@ -43,8 +55,11 @@ const Hero = () => {
             </div>
 
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-              <Button className="bg-portfolio-blue hover:bg-portfolio-darkBlue gap-2 text-base">
-                Download CV <ArrowRight size={16} />
+              <Button 
+                className="bg-portfolio-blue hover:bg-portfolio-darkBlue gap-2 text-base"
+                onClick={handleDownloadCV}
+              >
+                Download CV <FileDown size={16} />
               </Button>
               <Button variant="outline" className="border-portfolio-blue text-portfolio-blue hover:bg-portfolio-blue hover:text-white">
                 <a href="#contact">Contact Me</a>
@@ -53,6 +68,8 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;
